@@ -1,4 +1,4 @@
-class GifController < ApplicationController
+class GifsController < ApplicationController
   def new
   end
 
