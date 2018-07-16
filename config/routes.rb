@@ -1,17 +1,10 @@
 Rails.application.routes.draw do
-  get 'gif/new'
 
-  get 'gif/index'
-
-  get 'gif/create'
-
-  get 'gif/destroy'
-
+  root 'static_pages#home'
   get 'static_pages/home'
-
   get 'static_pages/help'
 
-  resources :gifs
+  resources :gifs, only: [:new, :index, :create, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
