@@ -10,7 +10,7 @@ describe "registration workflow" do
       fill_in :user_password,	with: "password"
 
       click_on 'Create User'
-      expect(path).to eq(users_path)
+      expect(current_path).to eq(user_path(User.all.last))
     end
   end
 end
