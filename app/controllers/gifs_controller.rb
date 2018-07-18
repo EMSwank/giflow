@@ -3,6 +3,7 @@ class GifsController < ApplicationController
   end
 
   def index
+    @gifs = Gif.all
   end
 
   def create

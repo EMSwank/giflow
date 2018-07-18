@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'bootstrap'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -40,6 +41,8 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'active_designer'
+  gem 'simplecov', require: false, group: :test
+  gem 'factory_bot_rails'
 end
 
 group :development do
