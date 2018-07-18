@@ -9,10 +9,11 @@ Rails.application.routes.draw do
 
   resources :gifs, only: [:new, :index, :create, :destroy]
   resources :users, only: [:new, :index, :create, :show]
+  resources :categories, only: [:index]
 
   namespace :admin do
     resources :dashboards, only: [:index]
-    resources :categories, only: [:new, :create, :index, :destroy]
+    resources :categories, only: [:new, :create, :destroy]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
