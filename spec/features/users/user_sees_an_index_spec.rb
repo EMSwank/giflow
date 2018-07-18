@@ -13,7 +13,8 @@ describe "A User" do
       click_on "Log in"
 
       expect(current_path).to eq(user_path(user))
-
     end
+
+    
   end
 end
