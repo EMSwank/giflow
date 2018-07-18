@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180717180212) do
+ActiveRecord::Schema.define(version: 20180718171426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.bigint "gif_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gif_id"], name: "index_categories_on_gif_id"
+  end
 
   create_table "gifs", force: :cascade do |t|
     t.string "image_path"
@@ -30,4 +38,5 @@ ActiveRecord::Schema.define(version: 20180717180212) do
     t.string "password_digest"
   end
 
+  add_foreign_key "categories", "gifs"
 end
