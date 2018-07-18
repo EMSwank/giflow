@@ -20,7 +20,7 @@ RSpec.describe User, type: :model do
       user = create(:user)
 
       expect(user.role).to eq("default")
-      expect(user.default?).to be_truthy 
+      expect(user.default?).to be_truthy
     end
   end
 end
