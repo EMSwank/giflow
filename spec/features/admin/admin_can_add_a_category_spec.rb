@@ -5,7 +5,7 @@ describe "An Admin" do
     it "adds a new category" do
       admin = create(:user, role: 1)
 
-      visit new_category_path
+      visit new_admin_category_path
 
       expect(page).to have_content("Add Category")
 
