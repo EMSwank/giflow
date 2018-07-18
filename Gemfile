@@ -41,6 +41,8 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'active_designer'
+  gem 'simplecov', require: false, group: :test
+  gem 'factory_bot_rails'
 end
 
 group :development do
