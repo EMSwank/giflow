@@ -9,11 +9,13 @@ describe "An Admin" do
       visit new_admin_category_path
 
       expect(page).to have_content("Add Category")
-save_and_open_page
+
       fill_in "Add Category",	with: "test"
       click_on "Create Category"
 
-      expect(current_path).to eq(categories_path)
+      expect(current_path).to eq(admin_categories_path)
+      save_and_open_page
+      expect(page).to have_content("test") 
     end
   end
 end
