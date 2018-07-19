@@ -8,6 +8,11 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:password) }
   end
 
+  describe 'relationships' do
+    it {should have_many :gifs}
+    it {should have_many :categories}
+  end
+
   describe 'roles' do
     it 'can be created as an admin' do
       user = create(:user, role:1)
