@@ -1,17 +1,3 @@
-<h1>Welcome, <%= current_user.name %></h1>
+<h1>Welcome, <%= @user.name %></h1>
 
-  <% if current_user.gifs.empty? %>
-    <h2>No Gifs For You?!?</h2>
-    <%= link_to  "Pick Some Gifs", gifs_path %>
-  <% else %>
-    <h2>Your Favs</h2>
-  <% end %>
-
-  <% @categories.each do |category| %>
-    <h3><%= link_to  category.title, category_path(category) %></h3>
-    <% category.gifs.each do |gifs| %>
-      <% if current_user.gifs.include?(gif) %>
-        <img src="<%= gif.image_path %>">
-        <%end%>
-    <% end %>
-  <% end %>
+<h2>Select a Gif to Favorite!</h2>

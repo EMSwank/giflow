@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
-
+  get 'static_pages/home'
+  get 'static_pages/help'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  resources :gifs, only: [:index, :update]
-  resources :users, only: [:new, :create, :show]
-  resources :categories, only: [:index, :show, :destory]
+  resources :gifs, only: [:new, :index, :create, :destroy]
+  resources :users, only: [:new, :index, :create, :show]
 
   namespace :admin do
-    resources :gifs, only: [:create]
-    resources :categories, only: [:new]
+    resources :dashboards, only: [:index]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
