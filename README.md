@@ -24,7 +24,7 @@ Create an app where users can "favorite" gifs. Host your app live on Heroku.
 
 #### Categories
 
-- [ ] Gifs belong to a category (category is the original word that was searched for by the admin).
+- [x] Gifs belong to a category (category is the original word that was searched for by the admin).
 - [ ] categories can be created by a logged-in admin user (regular logged in users cannot create categories).
 - [ ] categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
 
@@ -33,8 +33,8 @@ Create an app where users can "favorite" gifs. Host your app live on Heroku.
 - [x] Users need to log in to see their favorited gifs.
 - [ ] Users can only see their own favorited gifs -- they should not be able to visit another user's page.
 - [ ] Users cannot create favorites for other users.
-- [ ] Users cannot create new categories -- only the admin can do that.
-- [ ] Users cannot create gifs -- only the admin can do that.
+- [x] Users cannot create new categories -- only the admin can do that.
+- [x] Users cannot create gifs -- only the admin can do that.
 - [x] Visitors (non-registered users) can create user accounts.
 
 #### User Experience
@@ -42,7 +42,7 @@ Create an app where users can "favorite" gifs. Host your app live on Heroku.
 - [x] The application has been styled.
 - [x] The application uses a balanced, considered color scheme.
 - [x] The application implements a font (that is not the default font).
-- [ ] The application utilizes a nav bar. 
+- [x] The application utilizes a nav bar. 
 - [x] The style shows evidence of intentional layout. 
 - [x] Space and text is balanced. White space is used to visually separate content. 
 - [ ] The application is easily usable. The user can intuitvely navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
