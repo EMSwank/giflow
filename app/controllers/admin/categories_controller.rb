@@ -1,8 +1,5 @@
 class Admin::CategoriesController < Admin::BaseController
-
-  def index
-  end
-
+ before_action :require_admin
   def new
     @category = Category.new
   end
