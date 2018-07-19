@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @categories = current_user.categories.order(:title).uniq
+    @categories = current_user.categories.order(:title)
   end
 
   private
