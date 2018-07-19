@@ -1,8 +1,8 @@
 <h1>Add Category</h1>
 
-<%= form_for ["admin", @category] do |f| %>
-<%= f.label :title, "Add Category" %>
-<%= f.text_field :title %>
 
-<%= f.submit %>
-<% end %>
+<%= form_tag admin_gifs_path do %>
+    <%= label_tag :category, 'Category' %>
+      <%= search_field_tag :category  %>
+  <%= submit_tag 'Create category', class:'button' %>
+    <% end %>

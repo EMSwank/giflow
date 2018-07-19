@@ -8,12 +8,9 @@ describe 'An admin' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
       visit gifs_path
-      within("#category-form") do
-      fill_in "Category",	with: category
-      save_and_open_page
-      click_on "Create Category"
-      end
-
+      click_on "Create a Category"
+save_and_open_page
+      expect(current_path).to eq(gifs_path) 
       expect(page).to have_content(category)
     end
   end

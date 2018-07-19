@@ -1,13 +1,5 @@
 <h1>All Gifs</h1>
-<div id="category-form"></div>
-<% if current_user.admin? %>
-  <%= form_tag admin_gifs_path do %>
-      <%= label_tag :category, 'Category' %>
-        <%= search_field_tag :category, 'puppers' %>
-    <%= submit_tag 'Generate Gif', class:'button' %>
-      <% end %>
-<% end %>
 
-  <%= label_tag :category, "Category" %>
-  <%= search_field_tag :category, "category" %>
-  <%= submit_tag "Create Category", class: 'btn' %>
+<% if current_user.admin? %>
+<%= link_to  "Create a Category", new_admin_category_path %>
+<% end %>
