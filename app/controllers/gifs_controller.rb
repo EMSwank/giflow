@@ -1,4 +1,7 @@
 class GifsController < ApplicationController
+  before_action :require_user, only: [:index]
+  before_action :require_admin, except: [:index]
+  
   def new
   end
 
