@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   validates :title, presence: true
-  belongs_to :gif
+  has_many :gifs, dependent: :destroy
 end

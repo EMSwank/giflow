@@ -1,4 +1,4 @@
 class Gif < ApplicationRecord
   validates :image_path, presence: true
-  has_many :categories
+  belongs_to :category
 end
