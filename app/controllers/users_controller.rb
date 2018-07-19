@@ -15,9 +15,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @categories = current_user.categories.order(:title).uniq
   end
-  
+
   private
 
   def user_params
