@@ -15,6 +15,8 @@ describe "A User" do
       expect(current_path).to eq(user_path(user))
     end
 
-    
+    it 'sees all categories on g' do
+      
+    end
   end
 end
