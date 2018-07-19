@@ -1,12 +1,23 @@
 class CategoriesController < ApplicationController
   before_action :require_user, only: [:show]
-
+  before_action :require_admin, ony: [:create]
   def index
     @categories = Category.all
   end
 
   def show
     @category = Category.find(params[:id])
+  end
+
+  def create
+    @category = Category.new(category_params)
+      if @category.save
+        session[:category_id] = @category.id
+        redirect_to category_path(@category)
+      else
+        render :new
+    end
+
   end
 
   private

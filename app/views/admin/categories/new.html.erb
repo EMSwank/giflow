@@ -3,6 +3,6 @@
 <h2>Add New Category</h2>
 <%= form_for @category do |f|%>
     <%= f.label :category, 'Category' %>
-    <%= f.text_field :title,  label: "Category" %>
+    <%= f.text_field :title %>
     <%= f.submit %>
 <% end %>
