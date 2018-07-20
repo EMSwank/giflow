@@ -1,5 +1,17 @@
+<div class="jumbotron text-center">
 <h1>All Categories</h1>
+</div>
 
-<% @categories.each do |category| %>
-  <%= category.title %>
-<% end %>
+<div class="row">
+    <% @categories.each do |category| %>
+  <div class="col-sm-2">
+    <div class="card text-white bg-warning mb-3">
+      <div class="card-body">
+        <div class="card-title text-center"><h6><%= link_to category.title, category_path(category) %></h6>
+      </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
