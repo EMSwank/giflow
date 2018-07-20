@@ -12,13 +12,11 @@ describe 'An admin' do
 
       expect(current_path).to eq(new_admin_category_path)
 
-      save_and_open_page
-      fill_in "Category",	with: category
+      fill_in "category[title]",	with: category
       click_on "Create Category"
 
-      expect(current_path).to eq(categorie_path)
+      expect(current_path).to eq(categories_path)
       expect(page).to have_content(category)
     end
   end
-  
 end

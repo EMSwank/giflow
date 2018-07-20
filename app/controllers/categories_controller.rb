@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
       if @category.save
         session[:category_id] = @category.id
-        redirect_to category_path(@category)
+        redirect_to categories_path
       else
         render :new
     end

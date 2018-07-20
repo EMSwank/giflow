@@ -14,8 +14,8 @@ class Admin::CategoriesController < Admin::BaseController
       flash[:error] = "Something went wrong. Try again."
       render :new
     end
-
   end
+
 
   private
 
