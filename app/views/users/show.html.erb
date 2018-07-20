@@ -5,8 +5,12 @@
     <%= link_to  "Pick Some Gifs", gifs_path %>
   <% else %>
     <h2>Your Favs</h2>
+    <% @favorites.each do |fav| %>
+    <%= image_tag(fav.image_path) %>
+    <% end %>
   <% end %>
 
+  <h1>Categories</h1>
   <% @categories.each do |category| %>
     <h3><%= link_to  category.title, category_path(category) %></h3>
     <% category.gifs.each do |gifs| %>
@@ -15,3 +19,4 @@
         <%end%>
     <% end %>
   <% end %>
+

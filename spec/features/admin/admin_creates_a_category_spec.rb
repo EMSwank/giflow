@@ -9,10 +9,14 @@ describe 'An admin' do
 
       visit gifs_path
       click_on "Create a Category"
-save_and_open_page
-      expect(current_path).to eq(gifs_path) 
+
+      expect(current_path).to eq(new_admin_category_path)
+
+      fill_in "category[title]",	with: category
+      click_on "Create Category"
+
+      expect(current_path).to eq(categories_path)
       expect(page).to have_content(category)
     end
   end
-  
 end
