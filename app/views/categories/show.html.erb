@@ -4,4 +4,5 @@
 
 <% @category.gifs.each do |gif| %>
   <%= image_tag(gif.image_path) %>
+  <%= link_to  "Add to Favorites", new_favorite_path %>
 <% end %>
