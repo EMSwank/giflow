@@ -9,7 +9,7 @@ class Admin::CategoriesController < Admin::BaseController
     if @category.save
       session[:category_id] = @category.id
       flash[:success] = "Category created!"
-      redirect_to gifs_path
+      redirect_to categories_path
     else
       flash[:error] = "Something went wrong. Try again."
       render :new
